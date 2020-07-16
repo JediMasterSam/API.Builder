@@ -1,0 +1,119 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DocumentationFile></DocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="4.1.1" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="4.1.1" />
+      <PackageReference Include="Microsoft.OpenApi" Version="1.2.0" />
+      <PackageReference Include="Namotion.Reflection" Version="1.0.12" />
+      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.5.1" />
+      <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Builders\SchemaBuilder.cs">
+        <DependentUpon>OpenApi.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Builders\SchemaBuilder.cs">
+        <DependentUpon>OpenApi.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Metadata\ApiVersionReader.cs">
+        <DependentUpon>MetadataReader.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Metadata\BindingSourceReader.cs">
+        <DependentUpon>MetadataReader.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Metadata\DefaultValueReader.cs">
+        <DependentUpon>MetadataReader.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Metadata\DeprecatedReader.cs">
+        <DependentUpon>MetadataReader.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Metadata\DescriptionReader.cs">
+        <DependentUpon>MetadataReader.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Metadata\ElementTypeReader.cs">
+        <DependentUpon>MetadataReader.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Metadata\FieldReader.cs">
+        <DependentUpon>MetadataReader.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Metadata\IgnoredReader.cs">
+        <DependentUpon>MetadataReader.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Metadata\MaximumReader.cs">
+        <DependentUpon>MetadataReader.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Metadata\MethodReader.cs">
+        <DependentUpon>MetadataReader.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Metadata\MinimumReader.cs">
+        <DependentUpon>MetadataReader.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Metadata\NameReader.cs">
+        <DependentUpon>MetadataReader.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Metadata\ObsoleteReader.cs">
+        <DependentUpon>MetadataReader.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Metadata\OperationTypeReader.cs">
+        <DependentUpon>MetadataReader.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Metadata\PropertyReader.cs">
+        <DependentUpon>MetadataReader.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Metadata\RequiredReader.cs">
+        <DependentUpon>MetadataReader.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Metadata\ResponseReader.cs">
+        <DependentUpon>MetadataReader.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Metadata\TypeReader.cs">
+        <DependentUpon>MetadataReader.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Metadata\UnderlyingTypeReader.cs">
+        <DependentUpon>MetadataReader.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Schema\ArraySchemaBuilder.cs">
+        <DependentUpon>OpenApiSchemaBuilder.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Schema\BooleanSchemaBuilder.cs">
+        <DependentUpon>OpenApiSchemaBuilder.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Schema\IntegerSchemaBuilder.cs">
+        <DependentUpon>OpenApiSchemaBuilder.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Schema\NumberSchemaBuilder.cs">
+        <DependentUpon>OpenApiSchemaBuilder.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Schema\ObjectSchemaBuilder.cs">
+        <DependentUpon>OpenApiSchemaBuilder.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Schema\ReferenceSchemaBuilder.cs">
+        <DependentUpon>OpenApiSchemaBuilder.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Defaults\Schema\StringSchemaBuilder.cs">
+        <DependentUpon>OpenApiSchemaBuilder.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Open API\Readers\MetadataReader.cs">
+        <DependentUpon>Metadata.cs</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Api.Builder.csproj.DotSettings" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Status Codes" />
+    </ItemGroup>
+
+</Project>
