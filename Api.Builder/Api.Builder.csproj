@@ -14,7 +14,7 @@
       <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="4.1.1" />
       <PackageReference Include="Microsoft.OpenApi" Version="1.2.0" />
       <PackageReference Include="Namotion.Reflection" Version="1.0.12" />
-      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.5.1" />
+      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.4.0" />
       <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
     </ItemGroup>
 
